@@ -55,7 +55,35 @@ ePaddy aims to improve paddy farming in Sri Lanka by combining technology and tr
 ![image](https://github.com/user-attachments/assets/063f7fc2-0b96-4555-8f2c-80a588f02268)
 
 ## Architectural Diagram
-![Architecture_diagram](https://github.com/user-attachments/assets/94edc726-fe59-43c1-838c-d5bd24848367)
 
+![Architecture_diagram](https://github.com/user-attachments/assets/a9217bf0-c735-4110-9c0d-ef52ae37b580)
+
+## Dependencies
+
+1. Data dependencies
+
+   •	weather data: Accurate real-time data for temperature, humidity, and rainfall to predict diseases
+
+   •	Image data: High-quality images of paddy crops to train and validate the CNN model for disease, pest, and growth stage identification.
+
+   •	Soil data: Data on soil quality, including NPK levels
+
+3. Technological Dependencies
+   
+   •	Machine Learning Models:
+   
+      * CNN for image analysis (disease, pests, growth stages).
+   
+      * Gradient Boosting models for disease prediction.
+   
+   •	IoT Sensors: Sensors for monitoring soil quality and water levels.
+
+   •	Mobile Application Framework: Flutter for building the app interface.
+
+   •	Backend Services: API frameworks like Flask, Django, or Node.js to connect the app with the models and database.
+
+   •	Cloud Services: For data storage (images, weather, and predictions) and model deployment.
+
+   •	Notification System: Services like Firebase Cloud Messaging for sending real-time alerts.
 
 
