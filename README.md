@@ -85,5 +85,7 @@ ePaddy aims to improve paddy farming in Sri Lanka by combining technology and tr
    •	Cloud Services: For data storage (images, weather, and predictions) and model deployment.
 
    •	Notification System: Services like Firebase Cloud Messaging for sending real-time alerts.
+   
 
 
+### Repository Link : https://github.com/KavishkaBingun/Research-Project-ePaddy
