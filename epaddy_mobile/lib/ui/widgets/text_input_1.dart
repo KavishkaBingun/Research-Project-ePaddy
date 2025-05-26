@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 class CustomTextInput extends StatelessWidget {
+  final TextEditingController controller;
   final String label;
   final IconData icon;
   final bool obscureText;
-  final TextEditingController? controller;
-  final String? Function(String?)? validator;
+  final String? Function(String?)? validator; // Add validator parameter ✅
 
   const CustomTextInput({
-    super.key,
+    Key? key,
+    required this.controller,
     required this.label,
-    required this.icon,
+    this.icon = Icons.text_fields,
     this.obscureText = false,
-    this.controller,
-    this.validator,
-  });
+    this.validator, // Accept validator function ✅
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +24,11 @@ class CustomTextInput extends StatelessWidget {
       decoration: InputDecoration(
         labelText: label,
         prefixIcon: Icon(icon),
-        border: OutlineInputBorder(),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
       ),
-      validator: validator,
+      validator: validator, // Use validator in TextFormField ✅
     );
   }
 }
