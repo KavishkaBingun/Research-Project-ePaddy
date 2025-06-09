@@ -57,7 +57,7 @@ class _CameraScreenState extends State<CameraScreen2> {
       );
     }
   }
-
+//pick image from gallery
   Future<void> _pickImageFromGallery() async {
     final ImagePicker picker = ImagePicker();
     final XFile? image = await picker.pickImage(source: ImageSource.gallery);
