@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
-import 'image_preview_screen_2.dart'; // Screen to show preview
+import 'image_preview_screen.dart'; // Screen to show preview
 
-class CameraScreen2 extends StatefulWidget {
+class CameraScreen extends StatefulWidget {
   @override
   _CameraScreenState createState() => _CameraScreenState();
 }
 
-class _CameraScreenState extends State<CameraScreen2> {
+class _CameraScreenState extends State<CameraScreen> {
   CameraController? _cameraController;
   List<CameraDescription>? _cameras;
   bool _isFlashOn = false;
@@ -52,12 +52,12 @@ class _CameraScreenState extends State<CameraScreen2> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => ImagePreviewScreen2(imagePath: file.path),
+          builder: (context) => ImagePreviewScreen(imagePath: file.path),
         ),
       );
     }
   }
-//pick image from gallery
+
   Future<void> _pickImageFromGallery() async {
     final ImagePicker picker = ImagePicker();
     final XFile? image = await picker.pickImage(source: ImageSource.gallery);
@@ -65,7 +65,7 @@ class _CameraScreenState extends State<CameraScreen2> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => ImagePreviewScreen2(imagePath: image.path),
+          builder: (context) => ImagePreviewScreen(imagePath: image.path),
         ),
       );
     }
